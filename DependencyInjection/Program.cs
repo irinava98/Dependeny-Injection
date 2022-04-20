@@ -7,15 +7,19 @@ namespace DependencyInjection
         public static void Main(string[] args)
         {
             IAnimal cat = new Cat();
-            AnimalHandler handler = new AnimalHandler(cat);
+            AnimalHandlerWithConstructor handler = new AnimalHandlerWithConstructor(cat);
             handler.Sound();
 
-           
-            AnimalHandler handler1= new AnimalHandler(new Cow());
+
+            AnimalHandlerWithConstructor handler1 = new AnimalHandlerWithConstructor(new Dog());
             handler1.Sound();
 
-            AnimalHandler handler2 = new AnimalHandler(new Fish());
+            AnimalHandlerWithProperty handler2 = new AnimalHandlerWithProperty();
+            handler2.Animal = new Cow();
             handler2.Sound();
+
+            AnimalHandlerWithMethod handler3 = new AnimalHandlerWithMethod();
+            handler3.Sound(new Fish());
         }
     }
 }

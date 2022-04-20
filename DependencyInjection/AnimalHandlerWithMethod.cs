@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace DependencyInjection
 {
-    public class AnimalHandler
+    public class AnimalHandlerWithMethod
     {
-        private readonly IAnimal animal;
-
-        public AnimalHandler(IAnimal animal)
+        public AnimalHandlerWithMethod()
         {
-            this.animal = animal;
+
         }
 
-        public void Sound()
+        public void Sound(IAnimal animal)
         {
             animal.MakingSound();
         }
-
     }
 }

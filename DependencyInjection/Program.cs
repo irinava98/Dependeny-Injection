@@ -11,8 +11,11 @@ namespace DependencyInjection
             handler.Sound();
 
            
-            AnimalHandler handler1= new AnimalHandler(new Dog());
+            AnimalHandler handler1= new AnimalHandler(new Cow());
             handler1.Sound();
+
+            AnimalHandler handler2 = new AnimalHandler(new Fish());
+            handler2.Sound();
         }
     }
 }

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace DependencyInjection
 {
-    public interface IAnimal
+    public class Cow : IAnimal
     {
-        void MakingSound();
+        public void MakingSound()
+        {
+            Console.WriteLine("Moo");
+        }
     }
 }
